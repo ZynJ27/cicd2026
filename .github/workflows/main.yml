@@ -8,5 +8,4 @@ jobs:
 
     steps:
       - name: Mostrar mensaje
-      run: echo "Hola Actions!"
-      
+        run: echo "Hola Actions!"
