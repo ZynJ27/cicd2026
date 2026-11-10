@@ -1,11 +1,17 @@
 name: Primer workflow
 
-on: push
+on: 
+  push:
+    branches:
+      - main
 
 jobs:
   probar_software:
-    runs-on: ubuntu-latest
-
+    runs-on: ${{matrix.os}}
+    strategy:
+      matrix:
+        os: [ubutu-latest, windows-latest, macOS-latest]
+        
     steps:
       - name: Bajar codigo
         uses: actions/checkout@v7
